@@ -1,0 +1,33 @@
+.formula-view-container .card {
+  cursor: pointer;
+}
+
+.formula-view-container .card-body {
+  background-color: #f3f3f3;
+}
+
+.formula-view-container .card.active,
+.formula-view-container .card:hover {
+  border-color: #ff9500;
+  box-shadow: 0 0 0 2px #ff9500;
+}
+
+.formula-view-container .card.active .card-body,
+.formula-view-container .card:hover .card-body {
+  background-color: #ff9500;
+}
+
+.formula-view-container .card.active .card-body h5,
+.formula-view-container .card:hover .card-body h5 {
+  color: #fff;
+}
+
+.formula-view-container .progress,
+.formula-view-container .progress-bar {
+  border-radius: 0px;
+  height: 8px;
+}
+
+.formula-view-container .progress-bar {
+  background-color: #ff9500;
+}
