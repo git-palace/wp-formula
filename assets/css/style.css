@@ -1,3 +1,7 @@
+.formula-view-container .question-item:focus {
+  outline: none
+}
+
 .formula-view-container .card {
   cursor: pointer;
 }
@@ -30,4 +34,151 @@
 
 .formula-view-container .progress-bar {
   background-color: #ff9500;
+}
+
+.formula-view-container .btn-outline-primary {
+  border-color: #ff9500;
+  background-color: #fff;
+  color: #ff9500;
+}
+
+.formula-view-container .btn-outline-primary:not(:disabled):not(.disabled).active,
+.formula-view-container .btn-outline-primary:not(:disabled):not(.disabled):active,
+.formula-view-container .btn-outline-primary:not(:disabled):hover {
+  background-color: #ff9500;
+  border-color: #ff9500;
+  color: #fff;
+}
+
+.formula-view-container .btn-outline-primary.focus,
+.formula-view-container .btn-outline-primary:focus,
+.formula-view-container .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.formula-view-container .btn-outline-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 149, 0, 0.5);
+}
+
+.formula-view-container .w-80 {
+  width: 80%;
+}
+
+.formula-view-container .ui-slider-range {
+  background-color: #ff9500;
+}
+
+.formula-view-container .ui-widget.ui-widget-content {
+  border-color: transparent;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"] {
+  position: relative;
+  border-radius: 0px;
+  height: 8px;
+  background-color: #e3e3e3;
+  border: none;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"] .ui-slider-range {
+  border-radius: 0px;
+  height: 8px;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]:before,
+.formula-view-container .question-item.slider div[id^="slide"]:after {
+  content: ' ';
+  position: absolute;
+  width: 10%;
+  height: 8px;
+  border: none;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]:before {
+  left: -10%;
+  background-color: #ff9500;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]:after {
+  right: -10%;
+  background-color: #e3e3e3;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"] .ui-slider-handle {
+  width: 30px;
+  height: 30px;
+  background: #ff9500;
+  border-color: #ff9500;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -15px;
+  margin-left: -15px;
+  top: 50%;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"] .ui-slider-handle:focus {
+  outline: none;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]+.values {
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  display: flex;
+  bottom: -15px;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]+.values .min-value,
+.formula-view-container .question-item.slider div[id^="slide"]+.values .max-value {
+  position: relative;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]+.values .min-value:before,
+.formula-view-container .question-item.slider div[id^="slide"]+.values .max-value:before {
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #e3e3e3;
+  position: absolute;
+  top: -25px;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]+.values .min-value:before {
+  left: 11%;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"]+.values .max-value:before {
+  right: 11%;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"] .ui-slider-handle span.value {
+  position: absolute;
+  width: 120px;
+  text-align: center;
+  bottom: 40px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #1e7cc2;
+  left: -50px;
+  font-weight: bold;
+}
+
+.formula-view-container .question-item.slider div[id^="slide"] .ui-slider-handle span.value:after {
+  content: ' ';
+  position: absolute;
+  border: 10px solid transparent;
+  border-top-color: #1e7cc2;
+  bottom: -20px;
+  left: 55px;
+}
+
+.formula-view-container .question-item.slider input[id^=input] {
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  width: 95px;
+  padding: 8px 5px;
+  line-height: 22px;
 }
