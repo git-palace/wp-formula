@@ -1,11 +1,11 @@
 <?php $sliderID = uniqid(); ?>
 
-<div class="row my-5">
-  <div class="col-12 col-md-4">
+<div class="row my-5 pb-5 pb-lg-0">
+  <div class="col-12 col-lg-4 mb-5 pb-5 mb-lg-0 pb-lg-0">
     <img class="m-auto" src="<?php esc_attr_e( $image_url )?>">
   </div>
 
-  <div class="col-12 col-md-8">
+  <div class="col-12 col-lg-8">
     <div class="row flex-column h-100">
       <div class="w-80 m-auto">
         <div id="slider-<?php esc_attr_e( $sliderID )?>"></div>
@@ -22,16 +22,16 @@
 </div>
 
 <div class="row">
-  <div class="col-12 col-md-4 hidden-sm-down"></div>
-  <div class="col-12 col-md-8">
+  <div class="col-12 col-lg-4 hidden-sm-down"></div>
+  <div class="col-12 col-lg-8">
     <div class="row">
-      <div class="col-12 col-md-8 mr-auto">
-        <label for="input-<?php esc_attr_e( $sliderID )?>">Slider Value: </label>
+      <div class="col-12 col-md-8 mr-auto mb-3 mb-md-0" style="display: flex; align-items: center;">
+        <label class="mr-5 my-0" for="input-<?php esc_attr_e( $sliderID )?>">Alternativ:<br/>genaue Angabe </label>
         <input id="input-<?php esc_attr_e( $sliderID )?>" value="<?php esc_attr_e( $min_value ) ?>" type="number" min="<?php esc_attr_e( $min_value ) ?>" max="<?php esc_attr_e( $max_value )?>">
-        <span> m<sup>2</sup></span>
+        <span class="ml-1"> m<sup>2</sup></span>
       </div>
       
-      <div class="col-12 col-md-4 ml-auto text-right">
+      <div class="col-12 col-md-4 ml-auto text-center text-md-right">
         <button type="button" class="btn btn-outline-primary px-5">&nbsp;Next&nbsp;</button>
       </div>
     </div>

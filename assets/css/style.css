@@ -121,7 +121,7 @@
   outline: none;
 }
 
-.formula-view-container .question-item.slider div[id^="slide"]+.values {
+.formula-view-container .question-item.slider div[id^="slide"]~.values {
   width: 90%;
   position: absolute;
   left: 5%;
@@ -129,26 +129,26 @@
   bottom: -15px;
 }
 
-.formula-view-container .question-item.slider div[id^="slide"]+.values .min-value,
-.formula-view-container .question-item.slider div[id^="slide"]+.values .max-value {
+.formula-view-container .question-item.slider div[id^="slide"]~.values .min-value,
+.formula-view-container .question-item.slider div[id^="slide"]~.values .max-value {
   position: relative;
 }
 
-.formula-view-container .question-item.slider div[id^="slide"]+.values .min-value:before,
-.formula-view-container .question-item.slider div[id^="slide"]+.values .max-value:before {
+.formula-view-container .question-item.slider div[id^="slide"]~.values .min-value:before,
+.formula-view-container .question-item.slider div[id^="slide"]~.values .max-value:before {
   content: ' ';
   height: 20px;
   width: 2px;
   background-color: #e3e3e3;
   position: absolute;
-  top: -25px;
+  top: -37px;
 }
 
-.formula-view-container .question-item.slider div[id^="slide"]+.values .min-value:before {
+.formula-view-container .question-item.slider div[id^="slide"]~.values .min-value:before {
   left: 11%;
 }
 
-.formula-view-container .question-item.slider div[id^="slide"]+.values .max-value:before {
+.formula-view-container .question-item.slider div[id^="slide"]~.values .max-value:before {
   right: 11%;
 }
 
@@ -162,6 +162,7 @@
   background-color: #1e7cc2;
   left: -50px;
   font-weight: bold;
+  border-radius: 4px;
 }
 
 .formula-view-container .question-item.slider div[id^="slide"] .ui-slider-handle span.value:after {
@@ -180,5 +181,326 @@
   box-shadow: none;
   width: 95px;
   padding: 8px 5px;
-  line-height: 22px;
+  line-height: 2em;
+  height: auto;
+}
+
+.formula-view-container .question-item.last-question input[name="zipcode"] {
+  line-height: 2em;
+  height: auto;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.formula-view-container .question-item.last-question input[name="zipcode"].invalid {
+  background-color: #fbe3e4;
+}
+
+.formula-view-container .question-item.submit-screen .tick {
+  position: relative;
+  font-size: 30px;
+  margin: auto;
+  padding-left: 40px;
+  line-height: 40px;
+}
+
+.formula-view-container .question-item.submit-screen .tick p {
+  margin-bottom: 0px;
+}
+
+.formula-view-container .question-item.submit-screen .tick:before {
+  content: ' ';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 5px;
+  background: url(../images/tick.png) no-repeat center;
+  background-size: contain;
+  top: 5px;
+}
+
+.formula-view-container .question-item.submit-screen .content-container {
+  background: url(../images/content-bg.png) no-repeat center;
+  background-size: contain;
+}
+
+.formula-view-container .question-item.submit-screen .content {
+  width: 300px;
+  padding: 60px 0;
+  margin: 30px 120px;
+}
+
+.formula-view-container .question-item.submit-screen .content .tick {
+  font-size: 18px;
+  margin: auto;
+  padding-left: 50px;
+  line-height: 25px;
+}
+
+.formula-view-container .question-item.submit-screen .content .tick:before {
+  height: 25px;
+  width: 25px;
+  left: 20px;
+  top: 0px;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check input {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check label {
+  cursor: pointer;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check label:before {
+  content: '';
+  vertical-align: sub;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-right: 5px;
+  border: 1px solid #999;
+  box-shadow: none;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check input:checked~label:before {
+  background: #28af1d !important;
+  border: 1px solid #28af1d;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check input:checked~label:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check label[for="check_confirm"] {
+  padding-left: 30px;
+  border-radius: 1px;
+  border: 1px solid transparent;
+  padding-bottom: 3px;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check label[for="check_confirm"]:before {
+  left: 3px;
+  top: 5px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check input:checked~label[for="check_confirm"]::after {
+  left: 11px;
+  top: 8px;
+}
+
+.formula-view-container .question-item.submit-screen form button {
+  background-image: linear-gradient(to bottom, #5ad000 0%, #49b000 100%);
+  border: none;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 10px 10px;
+  cursor: pointer;
+}
+
+.formula-view-container .question-item.submit-screen form button span {
+  display: block;
+  font-size: 18px;
+}
+
+.formula-view-container .question-item.submit-screen form button span:first-child {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.formula-view-container .question-item.submit-screen form input:not([type="checkbox"]) {
+  background-color: rgb(254, 255, 250);
+  border: 1px solid rgb(102, 102, 102);
+  font-size: 16px;
+  padding: 8px 12px;
+  height: 2.5em;
+  border-radius: 2px;
+}
+
+.formula-view-container .question-item.submit-screen form.was-validated input.form-control:not([type="checkbox"]):invalid {
+  background-color: #fbe3e4;
+  border-color: #fbc2c4;
+  color: #8a1f11;
+}
+
+.formula-view-container .question-item.submit-screen form input:not([type="checkbox"]):focus {
+  outline: none;
+}
+
+.formula-view-container .question-item.submit-screen form fieldset,
+.formula-view-container .question-item.submit-screen form .form-row,
+.formula-view-container .question-item.submit-screen form .form-group {
+  margin-bottom: 10px;
+}
+
+.formula-view-container .question-item.submit-screen form p.information {
+  position: relative;
+  padding-left: 30px;
+  background: #cfdbac;
+}
+
+.formula-view-container .question-item.submit-screen form p.information:before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: url(../images/info.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 2px;
+  top: 8px;
+}
+
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child {
+  position: relative;
+  width: 25px;
+  display: flex;
+}
+
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child .description {
+  display: none;
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  line-height: 1.2;
+  right: 0;
+  left: auto;
+  top: auto;
+  bottom: 40px;
+  width: 420px;
+  max-width: 80vw;
+  min-height: 50px;
+  padding: 8px 10px 15px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child .description.opened {
+  display: block;
+}
+
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child .description:before,
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child .description:after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 4px;
+  left: auto;
+  top: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child .description:before {
+  right: 3px;
+  bottom: -8px;
+  border-style: solid;
+  border-width: 7px 7px 0 7px;
+  border-color: rgba(0, 0, 0, 0.15) transparent transparent transparent;
+}
+
+.formula-view-container .question-item.submit-screen form .inc-tooltip div:last-child a {
+  cursor: pointer;
+}
+
+.formula-view-container .question-item.submit-screen form.was-validated .form-check-input:valid~.form-check-label {
+  color: inherit;
+}
+
+.formula-view-container .question-item.submit-screen form.was-validated .form-check-input:invalid~.form-check-label {
+  border-color: #fbc2c4;
+  background-color: #fbe3e4;
+  margin-top: 25px;
+}
+
+.formula-view-container .question-item.submit-screen form.was-validated .form-check-input:invalid~.form-check-label:before {
+  top: 30px;
+}
+
+.formula-view-container .question-item.submit-screen form .form-check.confirm span {
+  display: none;
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  color: #ff5760;
+}
+
+.formula-view-container .question-item.submit-screen form.was-validated .form-check.confirm .form-check-input:invalid~span {
+  display: block;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .formula-view-container .question-item.slider div[id^="slide"]~.values {
+    bottom: -60px;
+  }
+
+  .formula-view-container .question-item.submit-screen .content {
+    margin: 20px;
+  }
+
+  .formula-view-container .question-item.submit-screen .tick {
+    font-size: 20px;
+    padding-left: 30px;
+    line-height: 30px;
+  }
+
+  .formula-view-container .question-item.submit-screen .tick:before {
+    height: 20px;
+    width: 20px;
+  }
+
+  .formula-view-container .question-item.submit-screen .content .tick {
+    font-size: 16px;
+  }
+
+  .formula-view-container .question-item.submit-screen .content .tick:before {
+    height: 15px;
+    width: 15px;
+    left: 30px;
+    top: 5px;
+  }
+
+  .formula-view-container .question-item.submit-screen form h4,
+  .formula-view-container .question-item.submit-screen form button span:first-child {
+    font-size: 16px;
+  }
+
+  .formula-view-container .question-item.submit-screen form button span {
+    font-size: 13px;
+  }
+
+  .formula-view-container .question-item.submit-screen form .form-check.confirm span {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .formula-view-container .question-item.submit-screen .tick:before {
+    display: none;
+  }
 }
