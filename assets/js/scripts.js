@@ -28,7 +28,6 @@
     toNextQuestion();
   });
 
-
   $(".formula-view-container .question-item.multiple .card").click(function () {
     var cur_q_tag = $(this).parents(".question-item")[0];
 
