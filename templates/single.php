@@ -1,11 +1,11 @@
 <div class="row my-5">
   
-<?php $custom_class = count( $options ) > 6 ? 'col-md' : 'col-md-2'; ?>
+<?php $custom_class = count( $options ) > 4 ? 'col-md' : 'col-md-3'; ?>
 
   <?php foreach ( $options as $option ): extract( $option );?>
     
     <div class="col-6 <?php esc_attr_e( $custom_class ) ?> mx-auto">
-      <div class="card mx-1">
+      <div class="card mx-1 h-100">
         <img class="card-img-top p-4" src="<?php esc_attr_e( $image_url ) ?>">
         
         <div class="card-body">

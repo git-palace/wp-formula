@@ -40,7 +40,7 @@ add_shortcode( 'formula-view', function( $atts ) {
           
         <div class="col-12 question-item <?php esc_attr_e( $option_type ) ?>" question-idx="<?php esc_attr_e( $question_idx + 1 )?>">
           <div class="row">
-            <h1 class="text-center w-100 mb-5"><?php esc_html_e( $question ) ?></h2>
+            <h1 class="text-center w-100 mb-5" style="font-weight: normal;"><?php _e( $question ) ?></h2>
           </div>
 
           <?php include 'templates/' . $option_type . '.php'; ?>
